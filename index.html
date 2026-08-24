@@ -418,7 +418,7 @@
 
   /* ---------- bottom sheet ---------- */
   .sheet-overlay {
-    position: absolute;
+    position: fixed;
     inset: 0;
     background: rgba(20, 16, 10, 0.55);
     display: flex;
@@ -426,14 +426,15 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease;
-    z-index: 20;
-    border-radius: 24px;
+    z-index: 100;
   }
 
   .sheet-overlay.open { opacity: 1; visibility: visible; }
 
   .sheet {
     width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
     max-height: 86%;
     background: var(--surface);
     border-top: 1px solid var(--border-strong);
@@ -898,7 +899,6 @@
             </button>
           </div>
           <div class="sheet-body">
-            <p>Мединский курс — 1 том.</p>
             <p>Расписание: воскресенье и среда, 17:00 по мск.</p>
             <div class="sheet-point">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
